@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AutomationSuite2030 Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header><h1><i class="fa fa-rocket"></i> AutomationSuite2030</h1></header>
+  <div id="main">
+    <aside>
+      <ul>
+        <li class="active"><i class="fa fa-chart-line"></i> Earnings</li>
+        <li><i class="fa fa-robot"></i> Bots</li>
+        <li><i class="fa fa-cloud"></i> Cloud</li>
+        <li><i class="fa fa-link"></i> CPA Networks</li>
+        <li><i class="fa fa-share"></i> Social</li>
+        <li><i class="fa fa-cog"></i> Controls</li>
+      </ul>
+    </aside>
+    <section class="dashboard">
+      <div class="cards-row">
+        <div class="card">Today’s Earnings: <span>$224.45</span></div>
+        <div class="card">Active Bots: <span>41/44</span></div>
+        <div class="card">CPA Networks: <span>3</span></div>
+        <div class="card">IP Rotation: <span>9 Proxies</span></div>
+      </div>
+      <div class="chart-section">
+        <h2>Live Earnings Chart</h2>
+        <canvas id="earningsChart" width="600" height="300"></canvas>
+      </div>
+      <table class="status-table">
+        <tr>
+          <th>Bot</th><th>Status</th><th>IP</th><th>Offer</th><th>Error</th><th>Heal</th>
+        </tr>
+        <tr>
+          <td>Aff-Bot-1</td><td class="ok">Online</td><td>34.53.2.18</td><td>InstallApp25</td><td>-</td><td><button>Heal</button></td>
+        </tr>
+        <tr>
+          <td>SocialPoster</td><td class="ok">Online</td><td>125.62.20.2</td><td>Instagram</td><td>-</td><td><button>Heal</button></td>
+        </tr>
+        <tr>
+          <td>CryptoTrader</td><td class="err">Offline</td><td>11.92.15.9</td><td>Binance</td><td>API Timeout</td><td><button>Restart</button></td>
+        </tr>
+      </table>
+      <div class="controls">
+        <button>Start All Bots</button>
+        <button>Pause All Bots</button>
+        <button class="emergency">Emergency Kill</button>
+        <button>Run Diagnostics</button>
+        <button>Export Report</button>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Demo chart with sample data
+    var ctx = document.getElementById('earningsChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: {labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+        datasets:[{label:'Earnings',data:[120,180,130,210,180,224,203],borderColor:'#4776E6',fill:false}]},
+      options: {responsive:true, plugins:{legend:{display:false}}}
+    });
+  </script>
+</body>
+</html>
