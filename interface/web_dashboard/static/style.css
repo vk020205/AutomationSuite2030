@@ -1,0 +1,20 @@
+body {background:linear-gradient(60deg,#4776E6,#8e54e9);font-family:'Segoe UI',Arial,sans-serif;margin:0;color:#222;}
+header {background:#23236c;color:#fff;padding:26px 36px;font-size:2em;font-weight:600; letter-spacing:.04em;}
+#main {display:flex;}
+aside {width:210px;background:#2a2d5a;color:#fff;min-height:100vh;}
+aside ul {list-style:none;padding:0;}
+aside li {padding:17px 32px;font-size:1em;cursor:pointer;transition:all .15s;border-radius:8px;margin:9px 0;}
+aside li.active,aside li:hover {background:#4776E6;color:#fff;font-weight:600;}
+.dashboard{flex:1;padding:35px;}
+cards-row{display:flex;gap:28px;margin-bottom:28px;}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 12px #0001;padding:24px 16px;font-size:1.2em;font-weight:500;}
+.chart-section{background:#fff;border-radius:12px;box-shadow:0 2px 9px #0001;padding:26px;margin-bottom:24px;}
+.status-table{width:100%;background:#fff;border-radius:7px;box-shadow:0 1.5px 8px #0001;border-collapse:collapse;}
+.status-table th,.status-table td{padding:12px 8px;border-bottom:1px solid #eee;}
+.status-table th{background:#f4f6fc;}
+.status-table td.ok{color:#27b229;font-weight:600;}
+.status-table td.err{color:#d2222d;font-weight:600;}
+.controls{margin-top:24px;}
+.controls button{background:linear-gradient(90deg,#4776E6,#43e0ec);color:#fff;border:none;padding:12px 22px;border-radius:9px;font-size:1.07em;margin-right:14px;cursor:pointer;}
+.controls .emergency{background:linear-gradient(90deg,#c72d2d,#ee6868;)}
+.controls button:hover{opacity:.89;
